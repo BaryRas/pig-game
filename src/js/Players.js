@@ -1,17 +1,22 @@
 import { elements } from './helpers';
 
 export default class Players {
+
     constructor(roll, cur, total, canPlay, player, finalScore = 30) {
+
         this.rollScore = roll;
         this.currentScore = cur;
         this.totalScores = total;
         this.canPlay = canPlay; // Boolean
         this.player = player; // 0 / 1 
+
         this.finalScore = finalScore;
+
     }
 
     rollDice() {
         /* Rolling the dice */
+
         const dice1 = Math.ceil(Math.random() * 6);
         const dice2 = Math.ceil(Math.random() * 6);
         elements.classDice1.setAttribute("xlink:href", `img/sprite.svg#icon-dice${dice1}`);
@@ -47,6 +52,7 @@ export default class Players {
         this.totalScores += this.currentScore;
         this.currentScore = 0;
         document.getElementById(`current-${this.player}`).innerHTML = 0;
+
         document.getElementById(`score-${this.player}`).innerHTML = this.totalScores;
         document.getElementById(`player-current-${this.player}`).classList.remove("red-box");
         if (this.totalScores >= this.finalScore) {

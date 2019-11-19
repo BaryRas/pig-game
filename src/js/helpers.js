@@ -26,4 +26,5 @@ export const elements = {
     btnHold: document.querySelector('.btn-hold'),
     btnHide: document.querySelector('.pop-up'), 
     inputValue: document.getElementById('form__field')
+
 };

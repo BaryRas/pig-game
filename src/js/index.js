@@ -8,6 +8,7 @@ import { elements } from './helpers';
 const chan = new Players(0, 0, 0, true, 1);
 const lee = new Players(0, 0, 0, false, 2);
 
+
 document.getElementById(`player-current-${chan.player}`).classList.add("red-box");
 
     elements.btnRoll.addEventListener("click", e => {
@@ -16,9 +17,11 @@ document.getElementById(`player-current-${chan.player}`).classList.add("red-box"
             chan.rollDice();
             if (chan.canPlay === false) {
                 lee.canPlay = true;
+
                 toggle(lee.player);
 
             }    
+
         } else {
             lee.rollDice();
             if (lee.canPlay === false) {

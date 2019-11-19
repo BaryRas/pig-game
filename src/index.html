@@ -12,30 +12,40 @@
 <body>
     <div class="wrapper">
         
-        <div class="player player-0-panel active">
+
+        <div id="player-1" class="player active">
             <div class="player-name" id="name-1">Player 1</div>
             <div class="player-score" id="score-1">0</div>
             <div class="player-current-box" id="player-current-1">
                 <div class="player-current-label">Current</div>
                 <div class="player-current-score" id="current-1">0</div>
             </div>
-        </div>
+
+        </div> <!-- End of player-0-panel  -->
         
-        <div class="player player-1-panel">
+        <div id="player-2" class="player">
             <div class="player-name" id="name-2">Player 2</div>
             <div class="player-score" id="score-2">0</div>
             <div class="player-current-box" id="player-current-2">
                 <div class="player-current-label">Current</div>
                 <div class="player-current-score" id="current-2">0</div>
             </div>
-        </div>
-        
-        <button class="btn-new"><i class="fa fa-plus-circle"></i>New game</button>
-        <button class="btn-roll"><i class="fa fa-spinner"></i>Roll dice</button>
-        <button class="btn-hold"><i class="fa fa-pause-circle"></i>Hold</button> 
 
-        <svg class="dice">
-            <use id="dice" xlink:href="img/sprite.svg#icon-dice"></use>
+        </div> <!-- End of player-1-panel  -->
+        
+        <button class="btn-new new_game"><i class="fa fa-plus-circle"></i>New game</button>
+        <button class="btn-roll hide"><i class="fa fa-spinner"></i>Roll dice</button>
+        <button class="btn-hold hide"><i class="fa fa-pause-circle"></i>Hold</button> 
+
+        <svg id="dice" class="dice ">
+            <use  xlink:href="img/sprite.svg#icon-dice"></use>
+        </svg>
+        <svg id="dice1" class="dice hide">
+            <use  class="dice1"  xlink:href="img/sprite.svg#icon-dice1"></use>
+        </svg>
+        <svg id="dice2" class="dice hide">
+            <use class="dice2"  xlink:href="img/sprite.svg#icon-dice2"></use>
+
         </svg>
         
         
@@ -45,12 +55,28 @@
               <h3>End Game</h3>
               <i class="fa fa-trophy"></i>
               <p id="wins"></p>
-              <div class='dlg-prompt'>
-                    <a href="#" id="new_game" class="button">New Game</a>
-                    <a href="#" class="button">Exit</a>
-                  </div>
+
+                <div class='dlg-prompt'>
+                    <a href="#popup2" class="button btn--primary new_game">New Game</a>
+                    <a href="#" class="button btn--primary">Exit</a>
+                </div>
             </div>
-        </div>
+        </div> <!-- End of Popup 1  -->
+
+        <div id="popup2" class="pop-up">
+            <div class="box">
+                <a href="#" class="close-button">&times;</a>
+                <h3>New Game</h3>
+                <p>You can set the winning score, so the predefined score is 100.</p>
+                <div class="container">
+                        <form class="form">
+                            <input type="input" id="form__field" class="form__field" placeholder="Set the winning score" />
+                            <a href="#" id="submit" type="submit" class="btn btn--primary btn--inside">ok</a>
+                        </form>
+                </div>
+            </div>
+        </div> <!-- End of Popup 2  -->
+        
     </div>
     
     

@@ -16,9 +16,14 @@ export const elements = {
     playerBox0: document.getElementById('player-current-1'),
     playerBox1: document.getElementById('player-current-2'),
     rollDice: document.getElementById('dice'),
-    newGame: document.getElementById('new_game'),
+    rollDice1: document.getElementById('dice1'),
+    rollDice2: document.getElementById('dice2'),
+    classDice1: document.querySelector('.dice1'),
+    classDice2: document.querySelector('.dice2'),
+    newGame: document.querySelectorAll('.new_game'),
     btnNew: document.querySelector('.btn-new'),
     btnRoll: document.querySelector('.btn-roll'),
     btnHold: document.querySelector('.btn-hold'),
-    btnHide: document.querySelector('.pop-up')
+    btnHide: document.querySelector('.pop-up'), 
+    inputValue: document.getElementById('form__field')
 };
